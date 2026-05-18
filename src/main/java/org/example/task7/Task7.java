@@ -20,7 +20,7 @@ public class Task7 {
         return arrayList;
     }
 
-    public static ArrayList<String> getRandomColorArrayList () {
+    public static ArrayList<String> getRandomColorArrayList() {
         int itemsCount = (int) (Math.random() * 10);
         ArrayList<String> referenceList = initColorArrayOne();
         ArrayList<String> generatedList = new ArrayList<>();

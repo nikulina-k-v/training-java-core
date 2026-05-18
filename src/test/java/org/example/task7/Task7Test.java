@@ -72,20 +72,4 @@ class Task7Test {
 
         Task7.printChecksResult(firstList, secondList);
     }
-
-
-
-//    ArrayList<String> arrayList = new ArrayList<>();
-//        arrayList.add("Желтый");
-//        arrayList.add("Красный");
-//        arrayList.add("Белый");
-//        arrayList.add("Зеленый");
-//        arrayList.add("Черный");
-//        arrayList.add("Коричневый");
-//        arrayList.add("Синий");
-//        arrayList.add("Розовый");
-//        arrayList.add("Голубой");
-//        arrayList.add("Серый");
-//
-//        return arrayList;
 }

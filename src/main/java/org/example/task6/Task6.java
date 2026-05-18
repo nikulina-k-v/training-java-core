@@ -1,6 +1,9 @@
 package org.example.task6;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Task6 {
     public static ArrayList<String> initColorArrayOne() {
@@ -28,7 +31,7 @@ public class Task6 {
     public static void printSortedArrayListWithoutDup(
             ArrayList<String> firstArrayList,
             ArrayList<String> secondArrayList
-            ) {
+    ) {
         Set<String> set = new HashSet<>();
         set.addAll(firstArrayList);
         set.addAll(secondArrayList);

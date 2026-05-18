@@ -27,7 +27,7 @@ public class Task4 {
 
     public static void replaceBlueItem(ArrayList<String> arrayList) {
 
-        if(arrayList.contains("Black")) {
+        if (arrayList.contains("Black")) {
             System.out.println("Black уже есть под индексом " + arrayList.indexOf("Black") + "!");
             arrayList.forEach(System.out::println);
         } else {
