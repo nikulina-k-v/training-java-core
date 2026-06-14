@@ -1,25 +1,10 @@
 package org.example.task5;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Task5 {
-    public static ArrayList<String> initColorArray() {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Желтый");
-        arrayList.add("Красный");
-        arrayList.add("Синий");
-        arrayList.add("Зеленый");
-        arrayList.add("Розовый");
-        arrayList.add("Фиолетовый");
-        arrayList.add("Голубой");
-        arrayList.add("Оранжевый");
-        arrayList.add("Фуксия");
-        arrayList.add("Черный");
 
-        return arrayList;
-    }
-
-    public static void printArrayListFrom3to7(ArrayList<String> arrayList) {
+    public static void printArrayListFrom3to7(List<String> arrayList) {
         if (arrayList.size() < 6) {
             throw new IllegalArgumentException("В массиве меньше 7 элементов");
         }

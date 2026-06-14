@@ -1,21 +1,10 @@
 package org.example.task2;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Task2 {
 
-    public static ArrayList<String> initColorArray() {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Желтый");
-        arrayList.add("Красный");
-        arrayList.add("Синий");
-        arrayList.add("Зеленый");
-        arrayList.add("Розовый");
-
-        return arrayList;
-    }
-
-    public static void printCropArray(ArrayList<String> arrayList) {
+    public static void printCropList(List<String> arrayList) {
 
         for (int i = 0; i < arrayList.size(); i++) {
             if (arrayList.get(i).length() > 3) {

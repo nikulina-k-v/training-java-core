@@ -1,40 +1,14 @@
 package org.example.task7;
 
-import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Task7 {
-    public static ArrayList<String> initColorArrayOne() {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Желтый");
-        arrayList.add("Красный");
-        arrayList.add("Белый");
-        arrayList.add("Зеленый");
-        arrayList.add("Черный");
-        arrayList.add("Коричневый");
-        arrayList.add("Синий");
-        arrayList.add("Розовый");
-        arrayList.add("Голубой");
-        arrayList.add("Серый");
 
-        return arrayList;
-    }
-
-    public static ArrayList<String> getRandomColorArrayList() {
-        int itemsCount = (int) (Math.random() * 10);
-        ArrayList<String> referenceList = initColorArrayOne();
-        ArrayList<String> generatedList = new ArrayList<>();
-
-        for (int i = 0; i < itemsCount; i++) {
-            generatedList.add(referenceList.get((int) (Math.random() * 9)));
-        }
-
-        return generatedList;
-    }
 
     public static void printChecksResult(
-            ArrayList<String> firstArrayList,
-            ArrayList<String> secondArrayList
+            List<String> firstArrayList,
+            List<String> secondArrayList
     ) {
         boolean sizeCheck = false;
         boolean objectsEqualsWithoutOrderCheck = false;
@@ -48,7 +22,7 @@ public class Task7 {
             objectsEqualsWithoutOrderCheck = true;
         }
 
-        if (firstArrayList.equals(secondArrayList)) {
+        if (isEquals(firstArrayList, secondArrayList)) {
             fullItemEqualsWithOrderCheck = true;
         }
 
@@ -65,5 +39,20 @@ public class Task7 {
                 System.out.println("Третья проверка провалена");
             }
         }
+    }
+
+    private static boolean isEquals(List<String> firstList, List<String> secondList) {
+
+        if(firstList.size() != secondList.size()) {
+            return false;
+        }
+
+        for(int i = 0; i < firstList.size(); i++) {
+            if(!firstList.get(i).equals(secondList.get(i))) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

@@ -1,37 +1,31 @@
 package org.example.task4;
 
-import java.util.ArrayList;
+import org.example.Colors;
+
+import java.util.List;
 
 public class Task4 {
-    public static ArrayList<String> initColorArrayWithBlue() {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Yellow");
-        arrayList.add("Red");
-        arrayList.add("Blue");
-        arrayList.add("Green");
-        arrayList.add("Pink");
 
-        return arrayList;
-    }
+    public static void replaceBlueItem(List<String> arrayList) {
 
-    public static ArrayList<String> initColorArrayWithBlack() {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Yellow");
-        arrayList.add("Red");
-        arrayList.add("Blue");
-        arrayList.add("Green");
-        arrayList.add("Black");
-
-        return arrayList;
-    }
-
-    public static void replaceBlueItem(ArrayList<String> arrayList) {
-
-        if (arrayList.contains("Black")) {
-            System.out.println("Black уже есть под индексом " + arrayList.indexOf("Black") + "!");
+        if (arrayList.contains(Colors.BLACK.toString())) {
+            System.out.println("Black уже есть под индексом " + arrayList.indexOf(Colors.BLACK.toString()) + "!");
             arrayList.forEach(System.out::println);
         } else {
-            arrayList.set(arrayList.indexOf("Blue"), "Black");
+            arrayList.set(arrayList.indexOf(Colors.BLUE.toString()), Colors.BLACK.toString());
+            arrayList.forEach(System.out::println);
+        }
+    }
+
+    public static void replaceItem(List<String> arrayList, Colors targetColor, Colors newColor) {
+
+        if (arrayList.contains(newColor.toString())) {
+            System.out.println("Новый цвет уже есть под индексом " + arrayList.indexOf(targetColor.toString()) + "!");
+            arrayList.forEach(System.out::println);
+        } else {
+            do {
+                arrayList.set(arrayList.indexOf(targetColor.toString()), newColor.toString());
+            } while (arrayList.contains(targetColor.toString()));
             arrayList.forEach(System.out::println);
         }
     }
